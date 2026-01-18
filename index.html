@@ -10,16 +10,29 @@
       height: 100%;
       margin: 0;
     }
+
     body {
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: #000000;
+      overflow: hidden;
     }
+
     img {
       max-width: 440px;
       width: 90%;
       height: auto;
+      opacity: 0;
+      transform: scale(0.96);
+      animation: fadeZoom 1.4s ease-out forwards;
+    }
+
+    @keyframes fadeZoom {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   </style>
 </head>
@@ -27,7 +40,3 @@
   <img src="logo.png" alt="Logo">
 </body>
 </html>
-
-
-
-
